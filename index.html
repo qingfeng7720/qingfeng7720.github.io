@@ -1,914 +1,1059 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="zh-CN">
+
+
 <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="清风的博客">
+    <meta name="description" content="清风的博客">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>清风的博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
 
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <style type="text/css">
+        
+    </style>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no">
-<meta name="author" content="清风">
+    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    
+</head>
 
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper head-container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">清风的博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">清风的博客</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
 
     
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			Contact
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewbox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<style>
+    .carousel-control {
+        width: 45px;
+        height: 45px;
+        line-height: 55px;
+        border-radius: 45px;
+        background: transparent;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    #prev-cover {
+        position: absolute;
+        top: 48%;
+        left: 8px;
+    }
+
+    #next-cover {
+        position: absolute;
+        top: 48%;
+        right: 8px;;
+    }
+
+    #prev-cover i {
+        margin-right: 3px;
+    }
+
+    #next-cover i {
+        margin-left: 3px;
+    }
+
+    .carousel-control:hover {
+        background-color:rgba(0, 0, 0, .4);
+    }
+
+    .carousel-control i {
+        color: #fff;
+        font-size: 2.4rem;
+    }
+    
+    html, body {
+        height:100%;
+    }
+
+    #page {
+        height:100%;
+        min-height: 100%;
+        width:100%;
+    }
+</style>
+
+
+
+<div id="page" class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
 
+    <div class="carousel-item red white-text bg-cover about-cover">
+        <div class="container" style="right: 0px;left: 0px;">
+            <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Dandelion
+                
+            </div>
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="清风的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="清风的博客">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="清风的博客">
+            <div class="description center-align">
+                
+                <span id="typed"></span>
+                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+                <script>
+                    var typed = new Typed("#typed", {
+                        strings: ['从来没有真正的绝境, 只有心灵的迷途', 'Never really desperate, only the lost of the soul'],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
+            </div>
+        </div>
+    </div>
+</div>
 
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-
-    <link rel="alternate" href="/atom.xml" title="清风的博客" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.png">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-    <style> .article { opacity: 0;} </style>
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>清风的博客</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
 
 <script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
-    }
+    // 每天切换 banner 图.  Switch banner image every day.
+    $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fas fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+                <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
+                    <i class="fab fa-github-alt"></i>Github
+                </a>
+                
+            </div>
+            <div class="cover-social-link">
 
 
 
-    <script> yiliaConfig.rootUrl = "\/";</script>
 
 
 
 
 
 
-</head></html>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/img/avatar.png" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">清风</a></h1>
-        </hgroup>
 
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+$(function () {
+    let coverSlider = $('.carousel');
+    coverSlider.carousel({
+        duration: Number('120'),
+        fullWidth: true,
+        indicators: 'true' === 'true'
+    });
+
+    let carouselIntervalId;
+    
+    // Loop to call the next cover article picture.
+    let autoCarousel = function() {
+        carouselIntervalId = setInterval(function () {
+            coverSlider.carousel('next');
+        }, 5000);
+    };
+    autoCarousel();
+    
+
+    let restartPlay = function () {
         
-        <p class="header-subtitle">Dandelion</p>
+        clearInterval(carouselIntervalId);
+        autoCarousel();
         
+    };
 
-        
+    
+    // prev and next cover post.
+    $('#prev-cover').click(function () {
+        coverSlider.carousel('prev');
+        restartPlay();
+    });
+    $('#next-cover').click(function () {
+        coverSlider.carousel('next');
+        restartPlay();
+    });
+    
+});
+</script>
 
 
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
+
+<main class="content">
+
+    
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;我的梦想
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+        </div>
+    </div>
+</div>
+                    
+
+                    
+
+                    
+
+                    <div id="recommend-sections" class="recommend">
                         
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/09/28/bugku-web-GET/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="bugku_web_GET">
+                            
+                            <span class="card-title">bugku_web_GET</span>
                         </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                web基础$_GET
+
+
+打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问http://123.206.87.240:8002/get/?what=flag
+
+得到flag{bugku_get_su
+                            
                         </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Bugku-CTF-web/" class="post-category">
+                                    Bugku CTF web
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/CTF/">
+                            <span class="chip bg-color">CTF</span>
+                        </a>
                         
                     </div>
                     
                 </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/09/28/bugku-web-POST/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="bugku_web_POST">
+                            
+                            <span class="card-title">bugku_web_POST</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                web基础$_POST
+
+
+本题为POST传参，使用HackBar输出what=flag
+
+得到flagflag{bugku_get_ssseint67se}
+
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Bugku-CTF-web/" class="post-category">
+                                    Bugku CTF web
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
                         
-                        <li>友情链接</li>
+                        <a href="/tags/CTF/">
+                            <span class="chip bg-color">CTF</span>
+                        </a>
                         
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
+                    </div>
+                    
                 </div>
             </div>
-        
-
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/随笔">随笔</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                                <a class="fa 网易云音乐" href="/netease" title="网易云音乐"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
-
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于后台</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
-</div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">清风</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/img/avatar.png" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">清风</a></h1>
-            </hgroup>
             
-            <p class="header-subtitle">Dandelion</p>
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/09/28/bugku-web-计算机/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="bugku_web_计算机">
+                            
+                            <span class="card-title">bugku_web_计算机</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                计算机
+
+
+发现是一个计算题，当你输入值时，发现只能输一位数，打开开发人员工具，里面的maxlength值等于1，所以只能输一位数，我们可以在input里增加属性吧maxlength值改到100.
+
+改好后，打题目的计算结果输入验证得到fl
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Bugku-CTF-web/" class="post-category">
+                                    Bugku CTF web
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/CTF/">
+                            <span class="chip bg-color">CTF</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
             
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/随笔">随笔</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/09/28/bugku-web-web2/">
+                        <div class="card-image">
                             
-                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="bugku_web_web2">
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            <span class="card-title">bugku_web_web2</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
                             
-                                <a class="fa 网易云音乐" target="_blank" href="/netease" title="网易云音乐"></a>
+                                web2
+
+
+看题目提示，打开链接，出现一堆笑脸朝你奔来
+
+单击右键查看源代码，发现了flag   KEY{Web-2-bugKssNNikls9100}
+
+
                             
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-bugku-web-GET" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/09/28/bugku-web-GET/" class="article-date">
-      <time datetime="2019-09-28T13:02:19.000Z" itemprop="datePublished">2019-09-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/28/bugku-web-GET/">bugku_web_GET</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="web基础-GET"><a href="#web基础-GET" class="headerlink" title="web基础$_GET"></a><strong>web基础$_GET</strong></h1>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Bugku-CTF-web/">Bugku CTF web</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/09/28/bugku-web-GET/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-bugku-web-POST" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/09/28/bugku-web-POST/" class="article-date">
-      <time datetime="2019-09-28T13:00:09.000Z" itemprop="datePublished">2019-09-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/28/bugku-web-POST/">bugku_web_POST</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="web基础-POST"><a href="#web基础-POST" class="headerlink" title="web基础$_POST"></a><strong>web基础$_POST</strong></h1>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Bugku-CTF-web/">Bugku CTF web</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/09/28/bugku-web-POST/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-bugku-web-计算机" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/09/28/bugku-web-计算机/" class="article-date">
-      <time datetime="2019-09-28T12:54:31.000Z" itemprop="datePublished">2019-09-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/28/bugku-web-计算机/">bugku_web_计算机</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="计算机"><a href="#计算机" class="headerlink" title="计算机"></a><strong>计算机</strong></h1>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Bugku-CTF-web/">Bugku CTF web</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/09/28/bugku-web-计算机/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-bugku-web-web2" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/09/28/bugku-web-web2/" class="article-date">
-      <time datetime="2019-09-28T12:48:35.000Z" itemprop="datePublished">2019-09-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/28/bugku-web-web2/">bugku_web_web2</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="web2"><a href="#web2" class="headerlink" title="web2"></a><strong>web2</strong></h1>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Bugku-CTF-web/">Bugku CTF web</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2019/09/28/bugku-web-web2/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-web" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/07/08/web/" class="article-date">
-      <time datetime="2019-07-08T10:34:31.473Z" itemprop="datePublished">2019-07-08</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>title:实验室web</p>
-<p>date: 2019-07-08 18:42<br>tags: [CTF]</p>
-<h1 id="web"><a href="#web" class="headerlink" title="web"></a><strong>web</strong></h1>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2019/07/08/web/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-ISCC-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/06/13/ISCC-1/" class="article-date">
-      <time datetime="2019-06-13T13:20:54.000Z" itemprop="datePublished">2019-06-13</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/13/ISCC-1/">ISCC</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="MISC"><a href="#MISC" class="headerlink" title="MISC"></a>MISC</h1><p><img src="/2019/06/13/ISCC-1/ISCC1.png" alt="ISCC1"><br>将八进制的数转换成字符</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span> a[<span class="number">100</span>]=&#123;<span class="number">0126</span>,<span class="number">062</span>,<span class="number">0126</span>,<span class="number">0163</span>,<span class="number">0142</span>,<span class="number">0103</span>,<span class="number">0102</span>,<span class="number">0153</span>,<span class="number">0142</span>,<span class="number">062</span>,<span class="number">065</span>,<span class="number">0154</span>,<span class="number">0111</span>,<span class="number">0121</span>,<span class="number">0157</span>,<span class="number">0113</span>,<span class="number">0111</span>,<span class="number">0105</span>,<span class="number">0132</span>,<span class="number">0163</span>,<span class="number">0131</span>,<span class="number">0127</span>,<span class="number">0143</span>,<span class="number">066</span>,<span class="number">0111</span>,<span class="number">0105</span>,<span class="number">0154</span>,<span class="number">0124</span>,<span class="number">0121</span>,<span class="number">060</span>,<span class="number">0116</span>,<span class="number">067</span>,<span class="number">0124</span>,<span class="number">0152</span>,<span class="number">0102</span>,<span class="number">0146</span>,<span class="number">0115</span>,<span class="number">0107</span>,<span class="number">065</span>,<span class="number">0154</span>,<span class="number">0130</span>,<span class="number">062</span>,<span class="number">0116</span>,<span class="number">0150</span>,<span class="number">0142</span>,<span class="number">0154</span>,<span class="number">071</span>,<span class="number">0172</span>,<span class="number">0144</span>,<span class="number">0104</span>,<span class="number">0102</span>,<span class="number">0167</span>,<span class="number">0130</span>,<span class="number">063</span>,<span class="number">0153</span>,<span class="number">0167</span>,<span class="number">0144</span>,<span class="number">0130</span>,<span class="number">060</span>,<span class="number">0113</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;<span class="number">60</span>;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%c"</span>,a[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>运行结果：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">V2VsbCBkb25lIQoKIEZsYWc6IElTQ0N7TjBfMG5lX2Nhbl9zdDBwX3kwdX0K</span><br></pre></td></tr></table></figure>
-
-<p>再用base64来解密字符<br>Well done!</p>
-<p> <strong>Flag: ISCC{N0_0ne_can_st0p_y0u}</strong></p>
-<p><img src="/2019/06/13/ISCC-1/ISCC2.png" alt="img"></p>
-<p>附件下载，打看文件夹看到一堆汉字，我们仔细观察可以发现规律中间有一个空格的和两个空格的</p>
-<p><strong>使用c++编写程序把一个空格替换为0，两个空格替换为1</strong></p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line">​	<span class="keyword">char</span> ch[]=<span class="string">"蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條戶囗  萇條戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條戶囗  萇條戶囗  萇條戶囗  萇條戶囗  萇條蓅烺計劃 洮蓠朩暒戶囗  萇條"</span>;</span><br><span class="line"></span><br><span class="line">​	<span class="keyword">char</span> \*p;</span><br><span class="line"></span><br><span class="line">​	p=ch;</span><br><span class="line"></span><br><span class="line">​	<span class="keyword">while</span>(\p!=<span class="string">'\0'</span>)</span><br><span class="line"></span><br><span class="line">​	&#123;</span><br><span class="line"></span><br><span class="line">​		<span class="keyword">if</span>(\*p==<span class="string">' '</span>)&#123;</span><br><span class="line"></span><br><span class="line">​			<span class="keyword">if</span>(\(p+<span class="number">1</span>)==<span class="string">' '</span>)&#123;</span><br><span class="line"></span><br><span class="line">​				<span class="built_in">cout</span>&lt;&lt;<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">​				p++;</span><br><span class="line"></span><br><span class="line">​			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"></span><br><span class="line">​				<span class="built_in">cout</span>&lt;&lt;<span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">​			&#125;</span><br><span class="line"></span><br><span class="line">​		&#125;</span><br><span class="line"></span><br><span class="line">​		p++;</span><br><span class="line"></span><br><span class="line">​	&#125;</span><br><span class="line"></span><br><span class="line">​	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>使用转换工具将二进制转换成字符串</strong></p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC3.png" alt="img"></p>
-<p><strong>可以得到flag{ISCC WELCOME}</strong></p>
-<h1 id="倒立屋"><a href="#倒立屋" class="headerlink" title="倒立屋"></a><strong>倒立屋</strong></h1><p><img src="/2019/06/13/ISCC-1/%5CISCC4.png" alt="img"></p>
-<p>打开附件进行解压缩得到一张图片，此时就想要尝试一下图片解密</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC14.png" alt="img"></p>
-<p>对于LSB隐写，我们可以使用Stegsolve工具</p>
-<p>在工具中找到图片，并打开</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC5.png" alt="img"></p>
-<p>打开后进行以下操作</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC6.png" alt="img"></p>
-<p>找和flag相似的句子，我们可以发现本题的flag就在开头，我们仔细读题会发现重力反转，我们把IsCc_2019反过来的<strong>9102_cCsI</strong>,这就是flag</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC7.png" alt="img"></p>
-<h1 id="他们能在一起吗？"><a href="#他们能在一起吗？" class="headerlink" title="他们能在一起吗？"></a><strong>他们能在一起吗？</strong></h1><p><img src="/2019/06/13/ISCC-1/%5CISCC8.png" alt="img"></p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC9.png" alt="img"></p>
-<p><code>UEFTUyU3QjBLX0lfTDBWM19ZMHUlMjElN0Q=</code></p>
-<p>用base64解码</p>
-<p>PASS{0K_I_L0V3_Y0u!}</p>
-<p>可以去试一下提交，发现不对</p>
-<p>我们把这个二维码保存到本地，我们右键单击二维码，在打开方式栏选择360压缩打开得到下图的txt文件，点击该文件把刚刚解密的解码0K_I_L0V3_Y0u!输进去，最后得到flag</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC10.png" alt="img"></p>
-<p><strong>ISCC{S0rrY_W3_4R3_Ju5T_Fr1END}</strong></p>
-<h1 id="无法运行的exe"><a href="#无法运行的exe" class="headerlink" title="无法运行的exe"></a><strong>无法运行的exe</strong></h1><p><img src="/2019/06/13/ISCC-1/%5CISCC11.png" alt="img"></p>
-<p>附件下载该文件，进行解压，双击发现打不开</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC12.png" alt="img"></p>
-<p>我们首先在桌面上建立一个文本文档并打开，把runnable.exe拖拽到打开的新建文档中</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC13.png" alt="img"></p>
-<p>根据经验我们看开头的iVBORw0KGgAAAAA可以大概了解这是一张图片我们用base64图片在线转换工具上传一张类型为.png的图片会的解码为以“data:image/png;base64,”开头的编码因此我们tunnable.exe的编码加上前面这段编码点击Rase64还原图片</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC15.png" alt="img"></p>
-<p>我们右单击图片点查看图片信息，出现如下图点另存为</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC16.png" alt="img"></p>
-<p>使用WinHex打开另存为的图片，把图中的位置00改成0A，保存</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC17.png" alt="img"></p>
-<p>png类型的图片的编码开头是固定的</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC18.png" alt="img"></p>
-<p>弄好后右单击文件，点击打开方式选择画图，出现一个二维码，用手机扫描二维码得到flag</p>
-<h1 id="Aesop’s-secret"><a href="#Aesop’s-secret" class="headerlink" title="Aesop’s secret"></a>Aesop’s secret</h1><p><img src="/2019/06/13/ISCC-1/%5CISCC19.png" alt="img"></p>
-<p>附件下载好得到一张Aesop.gif的图片，我们首先在桌面上建立一个文本文档并打开，把Aesop.gif拖拽到打开的新建文档中，得到以下编码，通过观察我们可以知道在编码的最后面有以下蓝色的编码</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC20.png" alt="img"></p>
-<p>使用在线加密解密工具对其进行解密</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC21.png" alt="img"></p>
-<p>得到的明文再一次的进行解密，最后得到flag{DDiamondADeepDarkMine}</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC22.png" alt="img"></p>
-<h1 id="碎纸机"><a href="#碎纸机" class="headerlink" title="碎纸机"></a><strong>碎纸机</strong></h1><p><img src="/2019/06/13/ISCC-1/%5CISCC23.png" alt="img"></p>
-<p>附件下载可以得到一张jpg图片</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC24.png" alt="img"></p>
-<p>点击图片，单击右键选择打开方式，用360压缩文件打开，会得到几张jpg和一个redeme.txt</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC25.png" alt="img"></p>
-<p>redeme.txt的内容为</p>
-<p>碎纸机中居然是一堆黑色和白色的碎片，但是这些碎片之中到底会有什么样的宝藏呢？</p>
-<p>我去问了欧鹏·曦文同学，他说他有办法恢复拼图原貌，但是前提是要我把真正有用的东西给他。</p>
-<p>使用WinHex工具打开拼图，观察发现最后有一段被00包围的十六进制的编码</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC26.png" alt="img"></p>
-<p>把这段编码复制下来，步骤如下</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC27.png" alt="img"></p>
-<p>打开notepad++工具，把编码复制到里面去</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC28.png" alt="img"></p>
-<p>ctrl+F 打开查找快捷键，查找0的字符，把视图调为自动换行，即可得到</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC29.png" alt="img"></p>
-<p>对几幅图进行以上处理后得到 </p>
-<p><strong>Flag={ISCC_is_so_interesting_!}</strong></p>
-<h1 id="Reverse"><a href="#Reverse" class="headerlink" title="Reverse"></a><strong>Reverse</strong></h1><p><img src="/2019/06/13/ISCC-1/%5CISCC30.png" alt="img"></p>
-<p>附件下载打开是一个rev2.exe文件点击会发现，要输入用户名和密码</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC31.png" alt="img"></p>
-<p>我们首先在桌面上建立一个文本文档并打开，把rev2.exe拖拽到打开的新建文档中会出现下面的代码仔细观察代码找规律会发现flag</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC32.png" alt="img"></p>
-<p><strong>flag{ST0RING_STAT1C_PA55WORDS_1N_FIL3S_1S_N0T_S3CUR3}</strong></p>
-<h1 id="web1"><a href="#web1" class="headerlink" title="web1"></a><strong>web1</strong></h1><p><img src="/2019/06/13/ISCC-1/%5CISCC33.png" alt="img"></p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC34.png" alt="img"></p>
-<p>给出了一个PHP源代码  代码审计</p>
-<p><img src="/2019/06/13/ISCC-1/%5CISCC35.png" alt="img"></p>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">error_reporting(<span class="number">0</span>);关闭错误报告</span><br><span class="line"></span><br><span class="line"><span class="keyword">require</span> <span class="string">'flag.php'</span>;</span><br><span class="line">    $value = $_GET[<span class="string">'value'</span>];</span><br><span class="line"></span><br><span class="line">$password = $_GET[<span class="string">'password'</span>];     GET传参</span><br><span class="line"></span><br><span class="line">$username = <span class="string">''</span>;  赋值</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ($i = <span class="number">0</span>; $i &lt; count($value); ++$i)  <span class="keyword">for</span>循环语句当$i&lt;count() 函数返回$value中元素的数目。</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ($value[$i] &gt; <span class="number">32</span> &amp;&amp; $value[$i] &lt; <span class="number">127</span>) <span class="keyword">unset</span>($value);如果数目在<span class="number">32</span>到<span class="number">127</span>则销毁$value</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> $username .= chr($value[$i]);反则chr() 函数从指定 ASCII 值返回字符。（.=把右边的字串加到左边）</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> ($username == <span class="string">'w3lc0me_To_ISCC2019'</span> &amp;&amp; intval($password) &lt; <span class="number">2333</span> &amp;&amp; intval($password + <span class="number">1</span>) &gt; <span class="number">2333</span>) &#123;<span class="keyword">echo</span> <span class="string">'Hello '</span>.$username.<span class="string">'!'</span>, <span class="string">'&lt;br&gt;'</span>, PHP_EOL;</span><br><span class="line"></span><br><span class="line">​        	<span class="keyword">echo</span> $flag, <span class="string">'&lt;hr&gt;'</span>;</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2019/06/13/ISCC-1/%5CISCC36.png" alt="img"></p>
-<p>运行结果：<code>375307364355304365357351340367351329339323323306304305313</code></p>
-<p>intval() 函数用于获取变量的整数值   </p>
-<p>要满足intval($password) &lt; 2333 &amp;&amp; intval($password + 1) &gt; 2333  $username第一个字母w所对应的ascii码为119，在32-127范围内，因为chr()函数会自动进行mod256，所以可以传参119+256得到w，因为intval在如果参数是字符串，则返回字符串中第一个不是数字的字符之前的数字串所代表的整数值，就返回0，所以令$password=0xaaaa，字符$password和数字相加$password会先转成数字则intval（$password)=0&lt;2333,inval($password)&gt;2333,输出flag  </p>
-<p> ？<code>value[]=375&amp;value[]=307&amp;value[]=364&amp;value[]=355&amp;value[]=304&amp;value[]=365&amp;value[]=357&amp;value[]=351&amp;value[]=340&amp;value[]=367&amp;value[]=351&amp;value[]=329&amp;value[]=339&amp;value[]=323&amp;value[]=323&amp;value[]=306&amp;value[]=304&amp;value[]=305&amp;value[]=313&amp;password=0xaaaa</code></p>
-<p>得到：Hello w3lc0me_To_ISCC2019!</p>
-<p><strong>flag{8311873e241ccad54463eaa5d4efc1e9}</strong></p>
-<h1 id="web4暂时未做出"><a href="#web4暂时未做出" class="headerlink" title="web4暂时未做出"></a><strong>web4</strong>暂时未做出</h1><p><img src="/2019/06/13/ISCC-1/%5CISCC37.png" alt="img"></p>
-<p>isset() — 检测变量是否设置</p>
-<p>($_SERVER[‘REQUEST_URI’]);获取完整参数URL   parse_url()解析一个 URL 并返回一个关联数组，包含在 URL 中出现的各种组成部分</p>
-<p>parse_str($query);将查询字符串解析到变量中</p>
-<p>hash — 生成哈希值 ，要使用的哈希算法是sha256，来解析$key的值</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CTF/">CTF</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/06/05/hello-world/" class="article-date">
-      <time datetime="2019-06-05T13:25:55.972Z" itemprop="datePublished">2019-06-05</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/06/05/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2019 清风
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Bugku-CTF-web/" class="post-category">
+                                    Bugku CTF web
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/CTF/">
+                            <span class="chip bg-color">CTF</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/07/08/web/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt>
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                title:实验室web
+date: 2019-07-08 18:42tags: [CTF]
+web
+
+friend
+
+代码审计题
+123456789101112131415161718192021222324252627282930313
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-08
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                清风
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
             </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/06/13/ISCC-1/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="ISCC">
+                            
+                            <span class="card-title">ISCC</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                MISC将八进制的数转换成字符
+123456789101112#include&lt;iostream&gt;using namespace std;int main()&#123;	char a[100]=&#123;0126,062,0
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-06-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                清风
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/CTF/">
+                            <span class="chip bg-color">CTF</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2019/06/05/hello-world/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                            
+                            <span class="card-title">Hello World</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-06-05
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-user fa-fw"></i>
+                                清风
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+            
         </div>
-        
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style="display:none">
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style="display:none">
-                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
+    </article>
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">年份</span>
+            <a href="http://yoursite.com" target="_blank">清风</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv" class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    window.setTimeout("siteTime()", 1000);
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2019";
+                    var startMonth = "6";
+                    var startDate = "28";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
     </div>
 </footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
     </div>
-    
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 1;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
-    </script>
-
-
-
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
 </div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <!-- Baidu Analytics -->
+
+
+    <!-- Baidu Push -->
+
 <script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
-             menu: ".header-menu a", 
-             friends: "#js-friends a", 
-             socail: ".social a" 
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
         }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
 </script>
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-    </div>
-    <!-- 页面点击小红心 -->
-<script type="text/javascript" src="/js/clicklove.js"></script>
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: ""
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+    
+    
+
 </body>
+
 </html>
