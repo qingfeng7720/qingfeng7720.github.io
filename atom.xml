@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-29T12:23:33.715Z</updated>
+  <updated>2019-10-08T11:02:51.542Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/09/28/bugku-web-GET/"/>
     <id>http://yoursite.com/2019/09/28/bugku-web-GET/</id>
     <published>2019-09-28T13:02:19.000Z</published>
-    <updated>2019-09-29T12:23:33.715Z</updated>
+    <updated>2019-10-08T11:02:51.542Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="web基础-GET"><a href="#web基础-GET" class="headerlink" title="web基础$_GET"></a><strong>web基础$_GET</strong></h1><a id="more"></a><p><img src="/2019/09/28/bugku-web-GET/bugku-web-GET%5C1.png" alt="img"></p><p>打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问<a href="http://123.206.87.240:8002/get/?what=flag" target="_blank" rel="noopener">http://123.206.87.240:8002/get/?what=flag</a></p><p><img src="/2019/09/28/bugku-web-GET/bugku-web-GET%5C2.png" alt="img"></p><p>得到flag{bugku_get_su8kej2en}</p><p>post与get的区别：</p><p>1.Post传输数据时，不需要在URL中显示出来，而Get方法要在URL中显示。 </p><p>2.Post传输的数据量大，可以达到2M，而Get方法由于受到URL长度的限制,只能传递大约1024字节. </p><p>3.Post顾名思义,就是为了将数据传送到服务器段,Get就是为了从服务器段取得数据.而Get之所以也能传送数据,只是用来设计告诉服务器,你到底需要什么样的数据.Post的信息作为http请求的内容，而Get是在Http头部传输的。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="web基础-GET"><a href="#web基础-GET" class="headerlink" title="web基础$_GET"></a><strong>web基础$_GET</strong></h1><a id="more"></a><p><img src="/2019/09/28/bugku-web-GET/_posts%5Cbugku-web-GET%5C1.png" alt="img"></p><p>打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问<a href="http://123.206.87.240:8002/get/?what=flag" target="_blank" rel="noopener">http://123.206.87.240:8002/get/?what=flag</a></p><p><img src="/2019/09/28/bugku-web-GET/bugku-web-GET%5C2.png" alt="img"></p><p>得到flag{bugku_get_su8kej2en}</p><p>post与get的区别：</p><p>1.Post传输数据时，不需要在URL中显示出来，而Get方法要在URL中显示。 </p><p>2.Post传输的数据量大，可以达到2M，而Get方法由于受到URL长度的限制,只能传递大约1024字节. </p><p>3.Post顾名思义,就是为了将数据传送到服务器段,Get就是为了从服务器段取得数据.而Get之所以也能传送数据,只是用来设计告诉服务器,你到底需要什么样的数据.Post的信息作为http请求的内容，而Get是在Http头部传输的。</p>]]></content>
     
     <summary type="html">
     
