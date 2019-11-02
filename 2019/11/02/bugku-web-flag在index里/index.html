@@ -4,13 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="bugku_web_GET, 清风的博客">
-    <meta name="description" content="web基础$_GET
+    <meta name="keywords" content="bugku-web-flag在index里, 清风的博客">
+    <meta name="description" content="flag在index里
 
 
-打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问http://123.206.87.240:8002/get/?what=flag
+该题是经典的文件包含漏洞+PHP伪协议的结合
+打开链接，发现点击click me？no还有一个PHP文件
 
-得到flag{bugku_get_su">
+因为看不到PHP文件里的内容，所以可以用PHP伪协议的封装协议php://filter
+
+php://f">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>bugku_web_GET | 清风的博客</title>
+    <title>bugku-web-flag在index里 | 清风的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,13 +312,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        bugku_web_GET
+                        bugku-web-flag在index里
                     </div>
                 </div>
             </div>
@@ -427,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CTF/">
-                                <span class="chip bg-color">CTF</span>
+                            <a href="/tags/Bugku-web/">
+                                <span class="chip bg-color">Bugku web</span>
                             </a>
                         
                     </div>
@@ -436,22 +439,13 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Bugku-CTF-web/" class="post-category">
-                                Bugku CTF web
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-28
+                    2019-11-02
                 </div>
 
                 
@@ -467,16 +461,28 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="web基础-GET"><a href="#web基础-GET" class="headerlink" title="web基础$_GET"></a><strong>web基础$_GET</strong></h1><a id="more"></a>
+                <h1 id="flag在index里"><a href="#flag在index里" class="headerlink" title="flag在index里"></a><strong>flag在index里</strong></h1><a id="more"></a>
 
-<p><img src="https://ftp.bmp.ovh/imgs/2019/10/6e4273555245fd0a.png" alt="1"></p>
-<p>打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问<a href="http://123.206.87.240:8002/get/?what=flag" target="_blank" rel="noopener">http://123.206.87.240:8002/get/?what=flag</a></p>
-<p><img src="https://ftp.bmp.ovh/imgs/2019/10/7fef3ca88a187b68.png" alt="2"></p>
-<p>得到flag{bugku_get_su8kej2en}</p>
-<p>post与get的区别：</p>
-<p>1.Post传输数据时，不需要在URL中显示出来，而Get方法要在URL中显示。 </p>
-<p>2.Post传输的数据量大，可以达到2M，而Get方法由于受到URL长度的限制,只能传递大约1024字节. </p>
-<p>3.Post顾名思义,就是为了将数据传送到服务器段,Get就是为了从服务器段取得数据.而Get之所以也能传送数据,只是用来设计告诉服务器,你到底需要什么样的数据.Post的信息作为http请求的内容，而Get是在Http头部传输的。</p>
+<p><img src="http://i1.fuimg.com/702861/f6bfb9dc083c8b1f.png" alt="img"></p>
+<p>该题是经典的文件包含漏洞+PHP伪协议的结合</p>
+<p>打开链接，发现点击click me？no还有一个PHP文件</p>
+<p><img src="http://i1.fuimg.com/702861/cf36f6107db0d64e.png" alt="img"></p>
+<p>因为看不到PHP文件里的内容，所以可以用PHP伪协议的封装协议php://filter</p>
+<p><img src="http://i1.fuimg.com/702861/0e830c0396e4c47c.png" alt="img"></p>
+<p>php://filter</p>
+<p>利用它可以读取服务器中的文件</p>
+<p>由于读取文件的数据直接输出在了页面上，如果读取的是php文件的话，PHP代码在浏览器中，解析会不正常，那么我们可以用这个协议将php文件中的代码以base64的形式输出在页面上： Payload:</p>
+<p><a href="http://xxx.xxx.xxx.xxx/test/file.php?filename=php://filter/read=convert.base64-encode/resource=file.php" target="_blank" rel="noopener">http://xxx.xxx.xxx.xxx/test/file.php?filename=php://filter/read=convert.base64-encode/resource=file.php</a></p>
+<p>在url中输入view-source:<a href="http://123.206.87.240:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php" target="_blank" rel="noopener">http://123.206.87.240:8005/post/index.php?file=php://filter/read=convert.base64-encode/resource=index.php</a></p>
+<p><img src="http://i1.fuimg.com/702861/7cf83b7c737ab19b.png" alt="img"></p>
+<p>得到一长段代码，对代码进行base64解码得到下面一个html</p>
+<html>      <title>Bugku-ctf</title>        <?php   error_reporting(0);   if(!$_GET[file]){echo '<a href="./index.php?file=show.php">click me? no';}   $file=$_GET['file'];   if(strstr($file,"../")||stristr($file, "tp")||stristr($file,"input")||stristr($file,"data")){    echo "Oh no!";    exit();   }   include($file);   //flag:flag{edulcni_elif_lacol_si_siht}  ?>  </html>  
+
+
+
+
+
+<p>得到flag{edulcni_elif_lacol_si_siht} </p>
 
             </div>
             <hr>
@@ -635,8 +641,8 @@
                 </a>
             </div>
             <br>
-            <a href="/2019/09/28/bugku-web-GET/">
-                    《bugku_web_GET》
+            <a href="/2019/11/02/bugku-web-flag在index里/">
+                    《bugku-web-flag在index里》
             </a> 由
             <a href="http://yoursite.com">
                 清风
@@ -681,26 +687,27 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/11/02/bugku-web-矛盾/">
+                <a href="/2019/11/02/bugku-web-请输入密码/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="bugku-web-矛盾">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="bugku-web-请输入密码">
                         
-                        <span class="card-title">bugku-web-矛盾</span>
+                        <span class="card-title">bugku-web-请输入密码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            矛盾
+                            请输入密码
 
+打开链接，页面显示输入五位数的密码，我们可以用Burpsuite pro来爆破
 
-is_numeric() 函数用于检测变量是否为数字或数字字符串。
-本题最开始num不能等于数字或数字字符串，而要得到flag要让num=1
-我们可以用科学计数法表示数字1，构造payload   num=1e0.1
+在文本框里随便输入5位数字，进行抓包
 
-得到fla
+把抓到的包点击Action，选择send to Intruder打开
+
+点击Positions，先清除b
                         
                     </div>
                     <div class="publish-info">
@@ -718,8 +725,8 @@ is_numeric() 函数用于检测变量是否为数字或数字字符串。
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Bugku-CTF-web/">
-                        <span class="chip bg-color">Bugku CTF web</span>
+                    <a href="/tags/Bugku-web/">
+                        <span class="chip bg-color">Bugku web</span>
                     </a>
                     
                 </div>
@@ -733,39 +740,34 @@ is_numeric() 函数用于检测变量是否为数字或数字字符串。
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/28/bugku-web-POST/">
+                <a href="/2019/11/02/bugku-web-你必须让他停下来/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="bugku_web_POST">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="bugku-web-你必须让他停下来">
                         
-                        <span class="card-title">bugku_web_POST</span>
+                        <span class="card-title">bugku-web-你必须让他停下来</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            web基础$_POST
+                            你必须让他停下来
 
 
-本题为POST传参，使用HackBar输出what=flag
+打开链接，发现图片一直在跳，我们可以尝试抓包，抓包发现有十几张图片，多尝试几次，最后在10.jpg中发现了flag{dummy_game_1s_s0_popular}
 
-得到flagflag{bugku_get_ssseint67se}
 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Bugku-CTF-web/" class="post-category">
-                                    Bugku CTF web
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            清风
                             
                         </span>
                     </div>
@@ -773,8 +775,8 @@ is_numeric() 函数用于检测变量是否为数字或数字字符串。
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CTF/">
-                        <span class="chip bg-color">CTF</span>
+                    <a href="/tags/Bugku-web/">
+                        <span class="chip bg-color">Bugku web</span>
                     </a>
                     
                 </div>

@@ -4,13 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="bugku_web_GET, 清风的博客">
-    <meta name="description" content="web基础$_GET
+    <meta name="keywords" content="bugku-web-请输入密码, 清风的博客">
+    <meta name="description" content="请输入密码
 
+打开链接，页面显示输入五位数的密码，我们可以用Burpsuite pro来爆破
 
-打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问http://123.206.87.240:8002/get/?what=flag
+在文本框里随便输入5位数字，进行抓包
 
-得到flag{bugku_get_su">
+把抓到的包点击Action，选择send to Intruder打开
+
+点击Positions，先清除b">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>bugku_web_GET | 清风的博客</title>
+    <title>bugku-web-请输入密码 | 清风的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,13 +312,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        bugku_web_GET
+                        bugku-web-请输入密码
                     </div>
                 </div>
             </div>
@@ -427,8 +430,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CTF/">
-                                <span class="chip bg-color">CTF</span>
+                            <a href="/tags/Bugku-web/">
+                                <span class="chip bg-color">Bugku web</span>
                             </a>
                         
                     </div>
@@ -436,22 +439,13 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Bugku-CTF-web/" class="post-category">
-                                Bugku CTF web
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-09-28
+                    2019-11-02
                 </div>
 
                 
@@ -467,16 +461,23 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="web基础-GET"><a href="#web基础-GET" class="headerlink" title="web基础$_GET"></a><strong>web基础$_GET</strong></h1><a id="more"></a>
+                <h1 id="请输入密码"><a href="#请输入密码" class="headerlink" title="请输入密码"></a><strong>请输入密码</strong></h1><a id="more"></a>
 
-<p><img src="https://ftp.bmp.ovh/imgs/2019/10/6e4273555245fd0a.png" alt="1"></p>
-<p>打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问<a href="http://123.206.87.240:8002/get/?what=flag" target="_blank" rel="noopener">http://123.206.87.240:8002/get/?what=flag</a></p>
-<p><img src="https://ftp.bmp.ovh/imgs/2019/10/7fef3ca88a187b68.png" alt="2"></p>
-<p>得到flag{bugku_get_su8kej2en}</p>
-<p>post与get的区别：</p>
-<p>1.Post传输数据时，不需要在URL中显示出来，而Get方法要在URL中显示。 </p>
-<p>2.Post传输的数据量大，可以达到2M，而Get方法由于受到URL长度的限制,只能传递大约1024字节. </p>
-<p>3.Post顾名思义,就是为了将数据传送到服务器段,Get就是为了从服务器段取得数据.而Get之所以也能传送数据,只是用来设计告诉服务器,你到底需要什么样的数据.Post的信息作为http请求的内容，而Get是在Http头部传输的。</p>
+<p>打开链接，页面显示输入五位数的密码，我们可以用Burpsuite pro来爆破</p>
+<p><img src="http://i2.tiimg.com/702861/5b0aa24b05539ebd.png" alt="img"></p>
+<p>在文本框里随便输入5位数字，进行抓包</p>
+<p><img src="http://i2.tiimg.com/702861/fff8e2f5139af587.png" alt="img"></p>
+<p>把抓到的包点击Action，选择send to Intruder打开</p>
+<p><img src="http://i2.tiimg.com/702861/9293e5c6f9305cb1.png" alt="img"></p>
+<p>点击Positions，先清除burp认为需要猜测的密码，然后选中pwd=12345，点击Add添加符号§</p>
+<p><img src="http://i2.tiimg.com/702861/7a9f90ec25e821ac.png" alt="img"></p>
+<p>因为密码是五位数字组成的，所以Payload type选择Numbers数字类型的，因为是五位数数值的大小在10000到99999之间，step步骤填1步</p>
+<p><img src="http://i2.tiimg.com/702861/cc0a586d5e9b8d8b.png" alt="img"></p>
+<p>在Options中，把number of threads改成100</p>
+<p><img src="http://i2.tiimg.com/702861/17f5f6a8d54e2fd7.png" alt="img"></p>
+<p>最后点击start attack，在结果中找长度不一样的，可以发现一个五位数的密码13579</p>
+<p><img src="http://i2.tiimg.com/702861/1036ecd0bbb7d62e.png" alt="img"></p>
+<p>把密码输进到文本框中，点击查看，最后得到flag{bugku-baopo-hah}</p>
 
             </div>
             <hr>
@@ -635,8 +636,8 @@
                 </a>
             </div>
             <br>
-            <a href="/2019/09/28/bugku-web-GET/">
-                    《bugku_web_GET》
+            <a href="/2019/11/02/bugku-web-请输入密码/">
+                    《bugku-web-请输入密码》
             </a> 由
             <a href="http://yoursite.com">
                 清风
@@ -679,34 +680,36 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/11/02/bugku-web-矛盾/">
+                <a href="/2019/11/02/bugku-web-请输入密码/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="bugku-web-矛盾">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="bugku-web-请输入密码">
                         
-                        <span class="card-title">bugku-web-矛盾</span>
+                        <span class="card-title">bugku-web-请输入密码</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            矛盾
+                            请输入密码
 
+打开链接，页面显示输入五位数的密码，我们可以用Burpsuite pro来爆破
 
-is_numeric() 函数用于检测变量是否为数字或数字字符串。
-本题最开始num不能等于数字或数字字符串，而要得到flag要让num=1
-我们可以用科学计数法表示数字1，构造payload   num=1e0.1
+在文本框里随便输入5位数字，进行抓包
 
-得到fla
+把抓到的包点击Action，选择send to Intruder打开
+
+点击Positions，先清除b
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -715,11 +718,12 @@ is_numeric() 函数用于检测变量是否为数字或数字字符串。
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Bugku-CTF-web/">
-                        <span class="chip bg-color">Bugku CTF web</span>
+                    <a href="/tags/Bugku-web/">
+                        <span class="chip bg-color">Bugku web</span>
                     </a>
                     
                 </div>
@@ -733,39 +737,37 @@ is_numeric() 函数用于检测变量是否为数字或数字字符串。
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/28/bugku-web-POST/">
+                <a href="/2019/11/02/bugku-web-flag在index里/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="bugku_web_POST">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="bugku-web-flag在index里">
                         
-                        <span class="card-title">bugku_web_POST</span>
+                        <span class="card-title">bugku-web-flag在index里</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            web基础$_POST
+                            flag在index里
 
 
-本题为POST传参，使用HackBar输出what=flag
+该题是经典的文件包含漏洞+PHP伪协议的结合
+打开链接，发现点击click me？no还有一个PHP文件
 
-得到flagflag{bugku_get_ssseint67se}
+因为看不到PHP文件里的内容，所以可以用PHP伪协议的封装协议php://filter
 
+php://f
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-09-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-02
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Bugku-CTF-web/" class="post-category">
-                                    Bugku CTF web
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            清风
                             
                         </span>
                     </div>
@@ -773,8 +775,8 @@ is_numeric() 函数用于检测变量是否为数字或数字字符串。
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CTF/">
-                        <span class="chip bg-color">CTF</span>
+                    <a href="/tags/Bugku-web/">
+                        <span class="chip bg-color">Bugku web</span>
                     </a>
                     
                 </div>
