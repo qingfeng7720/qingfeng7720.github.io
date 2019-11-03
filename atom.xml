@@ -171,9 +171,9 @@
     <link href="http://yoursite.com/2019/09/28/bugku-web-GET/"/>
     <id>http://yoursite.com/2019/09/28/bugku-web-GET/</id>
     <published>2019-09-28T13:02:19.000Z</published>
-    <updated>2019-11-02T12:19:26.858Z</updated>
+    <updated>2019-11-03T13:29:58.233Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="web基础-GET"><a href="#web基础-GET" class="headerlink" title="web基础$_GET"></a><strong>web基础$_GET</strong></h1><a id="more"></a><p><img src="https://ftp.bmp.ovh/imgs/2019/10/6e4273555245fd0a.png" alt="1"></p><p>打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问<a href="http://123.206.87.240:8002/get/?what=flag" target="_blank" rel="noopener">http://123.206.87.240:8002/get/?what=flag</a></p><p><img src="https://ftp.bmp.ovh/imgs/2019/10/7fef3ca88a187b68.png" alt="2"></p><p>得到flag{bugku_get_su8kej2en}</p><p>post与get的区别：</p><p>1.Post传输数据时，不需要在URL中显示出来，而Get方法要在URL中显示。 </p><p>2.Post传输的数据量大，可以达到2M，而Get方法由于受到URL长度的限制,只能传递大约1024字节. </p><p>3.Post顾名思义,就是为了将数据传送到服务器段,Get就是为了从服务器段取得数据.而Get之所以也能传送数据,只是用来设计告诉服务器,你到底需要什么样的数据.Post的信息作为http请求的内容，而Get是在Http头部传输的。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="web基础-GET"><a href="#web基础-GET" class="headerlink" title="web基础$_GET"></a><strong>web基础$_GET</strong></h1><a id="more"></a><p><img src="http://i1.fuimg.com/702861/6e4273555245fd0a.png" alt="1"></p><p>打开链接发现是GTE传参，根据题意当what等于flag是输出flag，于是在URL上访问<a href="http://123.206.87.240:8002/get/?what=flag" target="_blank" rel="noopener">http://123.206.87.240:8002/get/?what=flag</a></p><p>![2](<a href="http://i1.fuimg.com/702861/7fef3ca88a187b68.png" target="_blank" rel="noopener">http://i1.fuimg.com/702861/7fef3ca88a187b68.png</a></p><p>得到flag{bugku_get_su8kej2en}</p><p>post与get的区别：</p><p>1.Post传输数据时，不需要在URL中显示出来，而Get方法要在URL中显示。 </p><p>2.Post传输的数据量大，可以达到2M，而Get方法由于受到URL长度的限制,只能传递大约1024字节. </p><p>3.Post顾名思义,就是为了将数据传送到服务器段,Get就是为了从服务器段取得数据.而Get之所以也能传送数据,只是用来设计告诉服务器,你到底需要什么样的数据.Post的信息作为http请求的内容，而Get是在Http头部传输的。</p>]]></content>
     
     <summary type="html">
     
@@ -193,9 +193,9 @@
     <link href="http://yoursite.com/2019/09/28/bugku-web-POST/"/>
     <id>http://yoursite.com/2019/09/28/bugku-web-POST/</id>
     <published>2019-09-28T13:00:09.000Z</published>
-    <updated>2019-11-02T12:18:58.867Z</updated>
+    <updated>2019-11-03T13:30:47.193Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="web基础-POST"><a href="#web基础-POST" class="headerlink" title="web基础$_POST"></a><strong>web基础$_POST</strong></h1><a id="more"></a><p><img src="https://ftp.bmp.ovh/imgs/2019/10/ea308ca1098b2e02.png" alt="1"></p><p>本题为POST传参，使用HackBar输出what=flag</p><p><img src="https://ftp.bmp.ovh/imgs/2019/10/b9a82035be2c5648.png" alt="2"></p><p>得到flagflag{bugku_get_ssseint67se}</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="web基础-POST"><a href="#web基础-POST" class="headerlink" title="web基础$_POST"></a><strong>web基础$_POST</strong></h1><a id="more"></a><p><img src="http://i2.tiimg.com/702861/ea308ca1098b2e02.png" alt="1"></p><p>本题为POST传参，使用HackBar输出what=flag</p><p><img src="http://i2.tiimg.com/702861/b9a82035be2c5648.png" alt="2"></p><p>得到flagflag{bugku_get_ssseint67se}</p>]]></content>
     
     <summary type="html">
     
@@ -215,9 +215,9 @@
     <link href="http://yoursite.com/2019/09/28/bugku-web-%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     <id>http://yoursite.com/2019/09/28/bugku-web-计算机/</id>
     <published>2019-09-28T12:54:31.000Z</published>
-    <updated>2019-11-02T12:18:08.705Z</updated>
+    <updated>2019-11-03T13:29:05.955Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="计算机"><a href="#计算机" class="headerlink" title="计算机"></a><strong>计算机</strong></h1><a id="more"></a><p><img src="https://ftp.bmp.ovh/imgs/2019/10/7fece4fe0cfc1ab9.png" alt="1"></p><p>发现是一个计算题，当你输入值时，发现只能输一位数，打开开发人员工具，里面的maxlength值等于1，所以只能输一位数，我们可以在input里增加属性吧maxlength值改到100.</p><p><img src="https://ftp.bmp.ovh/imgs/2019/10/e5ae8ee80e9416c5.png" alt="2"></p><p>改好后，打题目的计算结果输入验证得到flag{CTF-bugku-0032}</p><p><img src="https://ftp.bmp.ovh/imgs/2019/10/94a258c643f9754b.png" alt="3"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="计算机"><a href="#计算机" class="headerlink" title="计算机"></a><strong>计算机</strong></h1><a id="more"></a><p><img src="http://i1.fuimg.com/702861/7fece4fe0cfc1ab9.png" alt="1"></p><p>发现是一个计算题，当你输入值时，发现只能输一位数，打开开发人员工具，里面的maxlength值等于1，所以只能输一位数，我们可以在input里增加属性吧maxlength值改到100.</p><p><img src="http://i1.fuimg.com/702861/e5ae8ee80e9416c5.png" alt="2"></p><p>改好后，打题目的计算结果输入验证得到flag{CTF-bugku-0032}</p><p><img src="http://i1.fuimg.com/702861/94a258c643f9754b.png" alt="3"></p>]]></content>
     
     <summary type="html">
     
